@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>靜態Name-Card</title>
+    <style>
+
+     *{
+/*   border:solid 1px; */
+  font-family:微軟正黑體;
+  position:relative;
+}
+html,body{
+  width:100%;
+  height:100%;
+  padding:0px;
+  margin:0px;
+}
+body{
+  background-color:#d1d1d1;
+  border-top: solid 20px #0d78f3;
+  border-bottom:solid 20px #215cff;
+  box-sizing:border-box;
+  overflow:hidden;
+}
+.namecard{
+  width:350px;
+  height:250px;
+  padding:20px;
+  margin:100px auto;
+  background-color:rgba(96, 74, 221, 0.63);
+  letter-spacing:3px;
+  font-weight:200;
+  color: rgb(255, 255, 255);
+  overflow:hidden;
+  border-radius:6px;
+  border: 1px solid (0,0,0,0.55);
+  box-shadow:10px 0px 15px rgba(0,0,0,0.5);
+  animation:mymove 3s;
+  cursor: pointer;
+}
+@keyframes mymove
+{
+  from{left: 50%}
+  to{left: 0%}
+  
+}
+
+.namecard:hover{
+  color: black;
+  background-color: #3F9AA5;
+}
+
+.namecard h2{
+  font-size:25px;
+  font-weight:800;
+  border: 3px dotted #fabf1b98;
+  
+}
+.namecard h2 span{
+  font-size:12px;
+}
+
+.namecard img{
+    width: 20px;
+    height: 20px;
+}
+
+
+.namecard h5{
+ color:#f0ff22;
+  font-weight:500;
+}
+.namecard p{
+  font-size:14px;
+  line-height:22px;
+}
+
+.circle {
+  width:100px;
+  height:100px;
+  border-radius:50%;
+  position:absolute;
+  
+  
+}
+.circle1{
+  right:20px;
+  bottom:-50px;
+  background-color:#224dd8b4;
+  opacity: 0.5
+}
+.circle2{
+  width:60px;
+  height:60px;
+  right:-30px;
+  top:-30px;
+  border:3px solid #197bfa;
+}
+.page_title{
+  color:#555555;
+  text-align:center;
+  font-weight:500;
+}
+
+.mark{
+  font-size:300px;
+  position:absolute;
+  bottom:100px;
+  font-weight:100;
+  color:rgba(0,0,0,0.025);
+  
+}
+.by{
+    float: right;
+    font-size: 4px;
+}
+  
+</style>
+
+
+
+</head>
+<body>
+  <div class="mark">NAMECARD</div>
+  <div class="namecard">
+  <h2>林惠君
+    <span>(Huei-Jiun Lin)</span>
+  <!--   <img src="images/pin.svg" alt=""> -->
+  </h2>
+  
+  <h5>無業遊民</h5>
+  
+  <hr>
+  <div class="pp">
+  <p>元智大學社會政策學系畢業<br>原是地球村美日韓語新店分校的店長，<br>在學習程式中發現程式的有趣<br>目前辭去工作努力學習前端工程師相關事務，<br>目標要成為一名前端工程師。</p>
+    </div>
+    
+    <div class="circle circle1"></div>
+    <div class="circle circle2"></div>
+    
+    
+  </div>
+  <h3 class="page_title">動畫網頁課程範例-名片</h3>
+  
+  
+  <script>
+    $(".namecard").click(function(){
+    $(".pp").slideToggle();
+    });
+  </script>
+  
+</body>
+</html>
